@@ -17,7 +17,7 @@ This module creates a VPC and public subnets.
 
 ```hcl
 module "vpc" {
-  source = "git::https://github.com/seu-usuario/terraform-modules.git//vpc"
+  source = "git::https://github.com/carlosmonteiro/terraform-modules.git/vpc"
   cidr_block = "10.0.0.0/16"
   name = "my-vpc"
   public_subnet_cidrs = ["10.0.1.0/24", "10.0.2.0/24"]

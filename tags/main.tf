@@ -2,8 +2,9 @@ locals {
   required_tags = {
     Project     = var.project
     Environment = var.environment
+    App         = var.app
     Owner       = var.owner
-    CostCenter  = var.cost_center
+    
   }
 
   all_tags = merge(local.required_tags, var.additional_tags)

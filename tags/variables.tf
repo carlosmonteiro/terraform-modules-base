@@ -4,7 +4,7 @@ variable "project" {
 }
 
 variable "environment" {
-  description = "Environment (e.g., dev, staging, prod)"
+  description = "Environment (dev, staging, prod)"
   type        = string
 }
 
@@ -13,8 +13,8 @@ variable "owner" {
   type        = string
 }
 
-variable "cost_center" {
-  description = "Cost center for billing purposes"
+variable "app" {
+  description = "Application name"
   type        = string
 }
 

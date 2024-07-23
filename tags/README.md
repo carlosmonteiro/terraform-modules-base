@@ -6,8 +6,8 @@ This module standardizes the tags for resources, ensuring that each resource has
 
 - `project`: Project name.
 - `environment`: Environment (e.g., dev, staging, prod).
+- `app`: Application name.
 - `owner`: Owner of the resource.
-- `cost_center`: Cost center for billing purposes.
 - `additional_tags`: Additional tags to be added to the resources.
 
 ## Outputs
@@ -18,14 +18,15 @@ This module standardizes the tags for resources, ensuring that each resource has
 
 ```hcl
 module "tags" {
-  source = "git::https://github.com/your-username/terraform-modules.git//tags"
+  source = "git::https://github.com/carlosmonteiro/terraform-modules.git/tags"
   project      = "MyProject"
+  app          = "MyApplication"
   environment  = "prod"
   owner        = "team@example.com"
-  cost_center  = "12345"
+  
   additional_tags = {
     Department = "IT"
-    App        = "MyApp"
+    CostCenter = "12345"
   }
 }
 
